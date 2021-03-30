@@ -1,2 +1,2 @@
-var date = moment().format('L'); 
-console.log(date);
+var current = moment().format('llll'); 
+console.log(current);

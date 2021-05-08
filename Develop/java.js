@@ -17,11 +17,26 @@ $( document ).ready(function() {
          // set/save to local storage
          localStorage.setItem(singleToDo,toDoHour)
       });
-      let hour = moment().hours();
+      
     // loop over time blocks
     $(".row").each(function() {
+        var hour = moment().hours();
+        console.log(hour);
         console.log("hellloooooo");
-        var blockHour = parseInt($(this).attr("id").split("-")[1]);
+        var blockHour = parseInt($(this).siblings(".toDo").attr("id"));
         console.log(blockHour);
+        // check if we've moved past this time
+      if (blockHour < hour) {
+        $(this).addClass("past");
+      } 
+      else if (blockHour === hour) {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+      } 
+      else {
+        $(this).removeClass("past");
+        $(this).removeClass("present");
+        $(this).addClass("future");
+      }
     });
 });

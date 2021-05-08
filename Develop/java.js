@@ -22,8 +22,8 @@ $( document ).ready(function() {
     $(".row").each(function() {
         var hour = moment().hours();
         console.log(hour);
-        var blockHour = parseInt($(this).siblings(".toDo").attr("id"));
-        console.log(blockHour);
+        var blockHour = parseInt($(this).attr("id"));
+        console.log("this: ", $(this).attr("id"));
         // check if we've moved past this time
       if (blockHour < hour) {
         $(this).addClass("past");

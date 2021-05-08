@@ -7,11 +7,12 @@ $( document ).ready(function() {
         alert( "Handler for .click() called." );
          //save 2 variables 
          var toDoHour;
-         var singleToDo;
-         // $(this) form
+         //var singleToDo=$(this).siblings(".toDo")[0].value;
+         // calling variables from index.html
          console.log($(this).siblings(".toDo")[0].value);
+         console.log($(this).siblings(".toDo").attr("id"));
 
-         // set to local storage
+         // set/save to local storage
          //localStorage.setItem(singleToDo,toDoHour)
       });
       

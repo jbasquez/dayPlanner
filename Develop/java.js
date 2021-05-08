@@ -9,7 +9,7 @@ $( document ).ready(function() {
          var toDoHour;
          var singleToDo;
          // $(this) form
-         console.log($(this).siblings(".toDo"));
+         console.log($(this).siblings(".toDo")[0].value);
 
          // set to local storage
          //localStorage.setItem(singleToDo,toDoHour)

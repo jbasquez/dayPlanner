@@ -18,4 +18,10 @@ $( document ).ready(function() {
          localStorage.setItem(singleToDo,toDoHour)
       });
       let hour = moment().hours();
+    // loop over time blocks
+    $(".row").each(function() {
+        console.log("hellloooooo");
+        var blockHour = parseInt($(this).attr("id").split("-")[1]);
+        console.log(blockHour);
+    });
 });

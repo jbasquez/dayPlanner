@@ -17,9 +17,5 @@ $( document ).ready(function() {
          // set/save to local storage
          localStorage.setItem(singleToDo,toDoHour)
       });
-      function colorChanger() {
-        let hour = moment().hours();
-        console.log(hour);
-      }
-      colorChanger();
+      let hour = moment().hours();
 });

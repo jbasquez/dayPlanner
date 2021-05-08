@@ -7,7 +7,7 @@ $( document ).ready(function() {
     //event listener for button to set and save id and text to local storage
     $( ".saveBtn" ).click(function() {
         alert( "Handler for .click() called." );
-         //save 2 variables 
+         //save 2 variables and connects them to html
          var toDoHour=$(this).siblings(".toDo").attr("id");
          var singleToDo=$(this).siblings(".toDo")[0].value;
          // calling variables from index.html
@@ -22,7 +22,6 @@ $( document ).ready(function() {
     $(".row").each(function() {
         var hour = moment().hours();
         console.log(hour);
-        console.log("hellloooooo");
         var blockHour = parseInt($(this).siblings(".toDo").attr("id"));
         console.log(blockHour);
         // check if we've moved past this time

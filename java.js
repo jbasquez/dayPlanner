@@ -24,15 +24,17 @@ $( document ).ready(function() {
         console.log(hour);
         var blockHour = parseInt($(this).attr("id"));
         console.log("this: ", $(this).attr("id"));
-        // check if we've moved past this time
+        // if current clock hour is less than the current hour it is in the past so add the class of past to change the color
       if (blockHour < hour) {
         $(this).addClass("past");
       } 
+      //if current time remove and add class to change colors
       else if (blockHour === hour) {
         $(this).removeClass("past");
         $(this).addClass("present");
       } 
       else {
+        //future
         $(this).removeClass("past");
         $(this).removeClass("present");
         $(this).addClass("future");

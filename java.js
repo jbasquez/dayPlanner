@@ -15,14 +15,18 @@ $( document ).ready(function() {
          console.log(singleToDo);
 
          // set/save to local storage
-         localStorage.setItem(singleToDo,toDoHour)
+         localStorage.setItem(toDoHour, singleToDo);
       });
       
     // loop over time blocks
     $(".row").each(function() {
+      //makes current time a variable
         var hour = moment().hours();
         console.log(hour);
+        //sets variable to html id
         var blockHour = parseInt($(this).attr("id"));
+        //gets value from storage
+        console.log(localStorage.getItem(blockHour));
         console.log("this: ", $(this).attr("id"));
         // if current clock hour is less than the current hour it is in the past so add the class of past to change the color
       if (blockHour < hour) {

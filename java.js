@@ -23,15 +23,20 @@ $( document ).ready(function() {
       //makes current time a variable
         var hour = moment().hours();
         console.log(hour);
+
         //sets variable to html id
         var blockHour = parseInt($(this).attr("id"));
+
         //gets value from storage
         console.log(localStorage.getItem(blockHour));
         console.log("this: ", $(this).attr("id"));
-        var currentTextArea = document.querySelector(".textarea" + blockHour)
-        //if blockHour is 9, then it'll find the element with class = textarea9
 
+        //new var to call on any id with a value
+        var currentTextArea = document.querySelector(".textarea" + blockHour)
+
+        //makes the text area equal to value save in local storage
         currentTextArea.value = localStorage.getItem(blockHour)
+        
         // if current clock hour is less than the current hour it is in the past so add the class of past to change the color
       if (blockHour < hour) {
         $(this).addClass("past");

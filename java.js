@@ -28,6 +28,10 @@ $( document ).ready(function() {
         //gets value from storage
         console.log(localStorage.getItem(blockHour));
         console.log("this: ", $(this).attr("id"));
+        var currentTextArea = document.querySelector(".textarea" + blockHour)
+        //if blockHour is 9, then it'll find the element with class = textarea9
+
+        currentTextArea.value = localStorage.getItem(blockHour)
         // if current clock hour is less than the current hour it is in the past so add the class of past to change the color
       if (blockHour < hour) {
         $(this).addClass("past");

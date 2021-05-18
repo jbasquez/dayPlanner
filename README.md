@@ -2,19 +2,13 @@
 
 ## Your Task
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery. It uses the Moment.js library.https://jbasquez.github.io/dayPlanner/
+This is a simple calendar application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery. It also uses the Moment.js library.https://jbasquez.github.io/dayPlanner/
 <img width="720" alt="Screen Shot 2021-05-02 at 8 09 11 AM" src="https://user-images.githubusercontent.com/71075507/118202451-fdd12b00-b427-11eb-8ec8-c5dac42d5668.png">
 
-## User Story
-
-```
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+Motivation: As an employee with a busy schedule I want to add important events to a daily planner so that I can manage my time effectively
 
 
-## Acceptance Criteria
+## Criteria
 
 ```
 GIVEN I am using a daily planner to create a schedule

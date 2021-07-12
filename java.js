@@ -37,17 +37,17 @@ $( document ).ready(function() {
         //makes the text area equal to value save in local storage
         currentTextArea.value = localStorage.getItem(blockHour)
         
-        // if current clock hour is less than the current hour it is in the past so add the class of past to change the color
+        // if current clock hour is less than the current hour it is in the past so add the class of past to change the color to white
       if (blockHour < hour) {
         $(this).addClass("past");
       } 
-      //if current time remove and add class to change colors
+      //if current time remove and add class to change colors to red
       else if (blockHour === hour) {
         $(this).removeClass("past");
         $(this).addClass("present");
       } 
       else {
-        //future
+        //future class is added to change to green
         $(this).removeClass("past");
         $(this).removeClass("present");
         $(this).addClass("future");
